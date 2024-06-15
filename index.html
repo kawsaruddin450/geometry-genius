@@ -7,6 +7,64 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    
+    <header>
+
+    </header>
+    <main>
+        <section class="w-full md:w-3/4 grid gid-cols-1 sm:grid-cols-2 md:grid-cols-3 my-12 gap-4">
+            <!--Triangle-->
+            <div class="border-2 border-solid rounded-lg py-12 px-11 text-center">
+                <img src="images/triangle.png" class="mx-auto" alt="triangle image">
+                <h3 class="text-center font-bold text-2xl text-slate-700 mt-12 mb-3">Triangle</h3>
+                <p class="text-slate-700 mb-5">Area (A) = 0.5 X b X h</p>
+                <div>
+                    <input type="text" name="" class="w-24 p-2 bg-slate-200" id="triangle-base" placeholder="b">
+                    <label for="triangle-base">cm</label>
+                    <input type="text" class="w-24 p-2 bg-slate-200" name="" id="triangle-height" placeholder="h">
+                    <label for="triangle-height">cm</label>
+                </div>
+                <button type="submit" id="triangle-calculate" class="bg-blue-600 text-white text-center py-4 w-full rounded-xl mt-12">Calculate</button>
+            </div>
+            <!--Rectangle-->
+            <div class="border-2 border-solid rounded-lg py-12 px-11 text-center">
+                <img src="images/rectangle.png" class="mx-auto" alt="rectangle image">
+                <h3 class="text-center font-bold text-2xl text-slate-700 mt-12 mb-3">Rectangle</h3>
+                <p class="text-slate-700 mb-5">Area (A) =  w X l</p>
+                <div>
+                    <input type="text" name="" class="w-24 p-2 bg-slate-200" id="rectangle-width" placeholder="w">
+                    <label for="rectangle-width">cm</label>
+                    <input type="text" class="w-24 p-2 bg-slate-200" name="" id="rectangle-length" placeholder="l">
+                    <label for="rectangle-length">cm</label>
+                </div>
+                <button type="submit" id="rectangle-calculate" class="bg-blue-600 text-white text-center py-4 w-full rounded-xl mt-12">Calculate</button>
+            </div>
+            <!--Parallelogram-->
+            <div class="border-2 border-solid rounded-lg py-12 px-11 text-center">
+                <img src="images/parallelogram.png" class="mx-auto" alt="parallelogram image">
+                <h3 class="text-center font-bold text-2xl text-slate-700 mt-12 mb-3">Parallelogram</h3>
+                <p class="text-slate-700 mb-5">Area (A) =  b X h</p>
+                <div>
+                    <input type="text" name="" class="w-24 p-2 bg-slate-200" id="parallelogram-base" placeholder="b">
+                    <label for="parallelogram-base">cm</label>
+                    <input type="text" class="w-24 p-2 bg-slate-200" name="" id="parallelogram-height" placeholder="h">
+                    <label for="parallelogram-height">cm</label>
+                </div>
+                <button type="submit" id="parallelogram-calculate" class="bg-blue-600 text-white text-center py-4 w-full rounded-xl mt-12">Calculate</button>
+            </div>
+            <!--Rhombus-->
+            <div class="border-2 border-solid rounded-lg py-12 px-11 text-center">
+                <img src="images/rhombus.png" class="mx-auto" alt="rhombus image">
+                <h3 class="text-center font-bold text-2xl text-slate-700 mt-12 mb-3">Rhombus</h3>
+                <p class="text-slate-700 mb-5">Area (A) =  0.5 X d<sub>1</sub> X d<sub>2</sub></p>
+                <div>
+                    <input type="text" name="" class="w-24 p-2 bg-slate-200" id="rhombus-d1" placeholder="d1">
+                    <label for="rhombus-d1">cm</label>
+                    <input type="text" class="w-24 p-2 bg-slate-200" name="" id="rhombus-d2" placeholder="d2">
+                    <label for="rhombus-d2">cm</label>
+                </div>
+                <button type="submit" id="rhombus-calculate" class="bg-blue-600 text-white text-center py-4 w-full rounded-xl mt-12">Calculate</button>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
