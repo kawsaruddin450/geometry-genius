@@ -19,6 +19,8 @@ function calculatePentagonArea(p, b) {
 function calculateEllipseArea(a, b) {
     return 3.14 * a * b;
 }
+
+
 //input field value getting function
 function getInput(inputId1, inputId2) {
     const inputField1 = document.getElementById(inputId1);
@@ -42,6 +44,7 @@ function getInput(inputId1, inputId2) {
         return inputs;
     }
 }
+
 //adds into result list
 function showResult(shapeName, result){
     const ol = document.getElementById('result-list');
@@ -59,6 +62,22 @@ function showResult(shapeName, result){
     ol.appendChild(li);
 }
 
+//random color generator
+function generateRandomColor(){
+    const hxCode= '0123456789ABCDEF';
+    let col = '#';
+    for(let i = 0; i<6; i++){
+        col += hxCode[Math.floor(Math.random()*16)];
+    }
+    return col;
+}
+//set random color function
+function setBackgroundRandom(id){
+    const card = document.getElementById(id);
+    card.style.backgroundColor = generateRandomColor();
+}
+
+//---------- Event Handlers ------------//
 //triangle
 document.getElementById('triangle-calculate').addEventListener('click', function (){
     const inputs = getInput('triangle-base', 'triangle-height');
@@ -136,4 +155,43 @@ document.getElementById('ellipse-calculate').addEventListener('click', function 
     else{
         alert(inputs);
     }
+})
+
+//set random color on hover
+document.getElementById('triangle-card').addEventListener('mouseover', function(){
+    setBackgroundRandom('triangle-card');
+});
+document.getElementById('rectangle-card').addEventListener('mouseover', function(){
+    setBackgroundRandom('rectangle-card');
+});
+document.getElementById('parallelogram-card').addEventListener('mouseover', function(){
+    setBackgroundRandom('parallelogram-card');
+});
+document.getElementById('rhombus-card').addEventListener('mouseover', function(){
+    setBackgroundRandom('rhombus-card');
+});
+document.getElementById('pentagon-card').addEventListener('mouseover', function(){
+    setBackgroundRandom('pentagon-card');
+});
+document.getElementById('ellipse-card').addEventListener('mouseover', function(){
+    setBackgroundRandom('ellipse-card');
+});
+//remove background on mouse out
+document.getElementById('triangle-card').addEventListener('mouseout', function(){
+    this.style.background = 'none';
+})
+document.getElementById('rectangle-card').addEventListener('mouseout', function(){
+    this.style.background = 'none';
+})
+document.getElementById('parallelogram-card').addEventListener('mouseout', function(){
+    this.style.background = 'none';
+})
+document.getElementById('rhombus-card').addEventListener('mouseout', function(){
+    this.style.background = 'none';
+})
+document.getElementById('pentagon-card').addEventListener('mouseout', function(){
+    this.style.background = 'none';
+})
+document.getElementById('ellipse-card').addEventListener('mouseout', function(){
+    this.style.background = 'none';
 })

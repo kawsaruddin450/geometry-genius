@@ -13,10 +13,10 @@
 
     </header>
     <main>
-        <section class="w-full grid gid-cols-3 lg:grid-cols-4 my-12 gap-4">
-            <div class="col-span-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <section class="w-full grid grid-cols-2 md:gid-cols-3 lg:grid-cols-4 my-12 gap-4">
+            <div class="col-span-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 content-start" id="card-container">
                 <!--Triangle-->
-                <div class="border-2 border-solid rounded-lg py-12 px-11 text-center">
+                <div class="border-2 border-solid rounded-lg py-12 px-11 text-center cards" id="triangle-card">
                     <img src="images/triangle.png" class="mx-auto" alt="triangle image">
                     <h3 class="text-center font-bold text-2xl text-slate-700 mt-12 mb-3">Triangle</h3>
                     <p class="text-slate-700 mb-5">Area (A) = 0.5 X b X h</p>
@@ -30,7 +30,7 @@
                         class="bg-blue-600 text-white text-center py-4 w-full rounded-xl mt-12">Calculate</button>
                 </div>
                 <!--Rectangle-->
-                <div class="border-2 border-solid rounded-lg py-12 px-11 text-center">
+                <div class="border-2 border-solid rounded-lg py-12 px-11 text-center cards" id="rectangle-card">
                     <img src="images/rectangle.png" class="mx-auto" alt="rectangle image">
                     <h3 class="text-center font-bold text-2xl text-slate-700 mt-12 mb-3">Rectangle</h3>
                     <p class="text-slate-700 mb-5">Area (A) = w X l</p>
@@ -44,7 +44,7 @@
                         class="bg-blue-600 text-white text-center py-4 w-full rounded-xl mt-12">Calculate</button>
                 </div>
                 <!--Parallelogram-->
-                <div class="border-2 border-solid rounded-lg py-12 px-11 text-center">
+                <div class="border-2 border-solid rounded-lg py-12 px-11 text-center cards" id="parallelogram-card">
                     <img src="images/parallelogram.png" class="mx-auto" alt="parallelogram image">
                     <h3 class="text-center font-bold text-2xl text-slate-700 mt-12 mb-3">Parallelogram</h3>
                     <p class="text-slate-700 mb-5">Area (A) = b X h</p>
@@ -60,7 +60,7 @@
                         class="bg-blue-600 text-white text-center py-4 w-full rounded-xl mt-12">Calculate</button>
                 </div>
                 <!--Rhombus-->
-                <div class="border-2 border-solid rounded-lg py-12 px-11 text-center">
+                <div class="border-2 border-solid rounded-lg py-12 px-11 text-center cards" id="rhombus-card">
                     <img src="images/rhombus.png" class="mx-auto" alt="rhombus image">
                     <h3 class="text-center font-bold text-2xl text-slate-700 mt-12 mb-3">Rhombus</h3>
                     <p class="text-slate-700 mb-5">Area (A) = 0.5 X d<sub>1</sub> X d<sub>2</sub></p>
@@ -74,7 +74,7 @@
                         class="bg-blue-600 text-white text-center py-4 w-full rounded-xl mt-12">Calculate</button>
                 </div>
                 <!--Pentagon-->
-                <div class="border-2 border-solid rounded-lg py-12 px-11 text-center">
+                <div class="border-2 border-solid rounded-lg py-12 px-11 text-center cards" id="pentagon-card">
                     <img src="images/pentagon.png" class="mx-auto" alt="pentagon image">
                     <h3 class="text-center font-bold text-2xl text-slate-700 mt-12 mb-3">Pentagon</h3>
                     <p class="text-slate-700 mb-5">Area (A) = 0.5 X p X b</p>
@@ -88,7 +88,7 @@
                         class="bg-blue-600 text-white text-center py-4 w-full rounded-xl mt-12">Calculate</button>
                 </div>
                 <!--Ellipse-->
-                <div class="border-2 border-solid rounded-lg py-12 px-11 text-center">
+                <div class="border-2 border-solid rounded-lg py-12 px-11 text-center cards" id="ellipse-card">
                     <img src="images/ellipse.png" class="mx-auto" alt="ellipse image">
                     <h3 class="text-center font-bold text-2xl text-slate-700 mt-12 mb-3">Ellipse</h3>
                     <p class="text-slate-700 mb-5">Area (A) = πab</p>
@@ -102,7 +102,7 @@
                         class="bg-blue-600 text-white text-center py-4 w-full rounded-xl mt-12">Calculate</button>
                 </div>
             </div>
-            <div>
+            <div class="lg:col-span-1 col-span-2 mx-auto">
                 <h3 class="text-center underline font-bold text-xl">Area Calculation</h3>
                 <ol id="result-list"></ol>
             </div>
