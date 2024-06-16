@@ -54,8 +54,8 @@ function showResult(shapeName, result){
     
     <h2 class="text-xl">${serial}. ${shapeName}</h2>
     <div class="grid grid-cols-2 items-center gap-2">
-        <p class="">${result.toFixed(2)}cm<sup>2</sup></p>
-        <button class="bg-blue-500 py-2 px-4 rounded-lg text-white font-medium w-full text-center">cm to m</button>
+        <p class="" id="${serial}-result">${result.toFixed(2)}cm<sup>2</sup></p>
+        <button class="bg-blue-500 py-2 px-4 rounded-lg text-white font-medium w-full text-center" id="$convert-${serial}">cm to m</button>
     </div>
     `
 
@@ -78,6 +78,7 @@ function setBackgroundRandom(id){
 }
 
 //---------- Event Handlers ------------//
+
 //triangle
 document.getElementById('triangle-calculate').addEventListener('click', function (){
     const inputs = getInput('triangle-base', 'triangle-height');
@@ -194,4 +195,10 @@ document.getElementById('pentagon-card').addEventListener('mouseout', function()
 })
 document.getElementById('ellipse-card').addEventListener('mouseout', function(){
     this.style.background = 'none';
+})
+
+
+//Redirect to blog page
+document.getElementById('blog-btn').addEventListener('click', function(){
+    window.location.href = "blog.html";
 })
