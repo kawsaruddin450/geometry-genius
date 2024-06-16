@@ -1,3 +1,5 @@
+let serial = 0;
+
 //area calculate functions for all shapes
 function calculateTriangleArea(base, height) {
     return 0.5 * base * height;
@@ -36,12 +38,30 @@ function getInput(inputId1, inputId2) {
         return inputs;
     }
 }
+//adds into result list
+function showResult(shapeName, result){
+    const ol = document.getElementById('result-list');
+    const li = document.createElement('li');
+    li.classList.add('grid', 'grid-cols-2', 'justify-between', 'items-center', 'mb-5')
+    li.innerHTML = `
+    
+    <h2 class="text-xl">${serial}. ${shapeName}</h2>
+    <div class="grid grid-cols-2 items-center gap-2">
+        <p class="">${result}cm<sup>2</sup></p>
+        <button class="bg-blue-500 py-2 px-4 rounded-lg text-white font-medium w-full text-center">cm to m</button>
+    </div>
+    `
+
+    ol.appendChild(li);
+}
 
 //triangle
 document.getElementById('triangle-calculate').addEventListener('click', function (){
     const inputs = getInput('triangle-base', 'triangle-height');
     if(Array.isArray(inputs)){
+        serial += 1;
         const triangleArea = calculateTriangleArea(inputs[0], inputs[1]);
+        showResult("Triangle", triangleArea);
         console.log(triangleArea);
     }
     else{
