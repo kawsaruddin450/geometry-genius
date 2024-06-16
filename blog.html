@@ -1,12 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <h1>Welcome to blog page!</h1>
+
+<body class="bg-orange-100">
+    <header>
+        <h1 class="text-5xl text-center font-medium text-violet-500 my-10">Welcome to My Blog!</h1>
+    </header>
+    <main>
+        <section class="qna-container p-12">
+            <div class="qna">
+                <h2 class="question text-2xl font-semibold">1. What is DOM? what is the purpose of DOM?</h2>
+                <p class="text-lg mt-5 ml-5">~Document Object Model(DOM) is a programming interface for web documents. It represents the webpage as document, so that programs can have access to documents structure, style and content. DOM is mostly used for manipulating html document. Any html document can be manipulated by scripting languages such as javascript. <br> main purpose of DOM is improving web documents from static to dynamic. It can access, change, add or remove any property, element or content of document dynamically. That is the power of DOM and true purpose of using document object model.</p>
+            </div>
+            <div class="qna mt-12">
+                <h2 class="question text-2xl font-semibold">2. Write a list of DOM selectors</h2>
+                <ul class="mt-5 ml-5">
+                    <li>document.getElementsByTagName()</li>
+                    <li>document.getElementsByClassName()</li>
+                    <li>document.getElementById()</li>
+                    <li>document.querySelector()</li>
+                    <li>document.querySelectorAll()</li>
+                </ul>
+            </div>
+            <div class="qna mt-12">
+                <h2 class="question text-2xl font-semibold">3. What is Event bubble?</h2>
+                <p class="text-lg mt-5 ml-5">~Event bubbling is a method of event propagation in DOM when an event is in an element inside another element, and both elements have registered a handle to that event. It's a process that starts with the element that triggured the event and than bubbles up to the containing elements in the hierarchy. Event bubbling is generally started from the innermost element and then propagate through outer elements.</p>
+            </div>
+            <div class="qna mt-12">
+                <h2 class="question text-2xl font-semibold">4. What is a callback function?</h2>
+                <p class="text-lg mt-5 ml-5">~A callback function is a function passed to another function as an argument. Then it is dependent on the caller function to do something.</p>
+            </div>
+        </section>
+    </main>
 </body>
+
 </html>
